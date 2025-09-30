@@ -1,7 +1,7 @@
-# Interview Assignment: Python API Service
+# Interview Assignment: React TypeScript User Management Dashboard
 
 ## Overview
-Your task is to build a Python API service that provides search, mutation, and subscription capabilities for a dataset of user information. The service should be built with scalability, maintainability, and performance in mind.
+Your task is to build a modern React TypeScript application that creates a user management dashboard using the provided dataset. This assignment focuses on demonstrating your understanding of state management, UI/UX design principles, and TypeScript development skills.
 
 ## Dataset
 The dataset (`data/mock_data.csv`) contains user information with the following fields:
@@ -12,54 +12,127 @@ The dataset (`data/mock_data.csv`) contains user information with the following 
 - gender
 - ip_address
 
-## Requirements
+## Technical Requirements
 
-### 1. API Endpoints
+### 1. Technology Stack
+- **React 18+** with TypeScript
+- **Node.js** and **npm** for package management
+- Use modern React patterns (functional components, hooks)
+- Implement proper TypeScript typing throughout
 
-#### Search Endpoint
-- Implement a search endpoint that allows querying the dataset
-- Support filtering by any field or combination of fields
-- Implement pagination for large result sets
-- Return results in JSON format
+### 2. Core Functionality
 
-#### Change Endpoint
-- Implement endpoints to:
-  - Add new records
-  - Update existing records
-  - Delete records
-- Validate input data
-- Handle errors appropriately
+#### User Data Management
+- Load and parse the CSV data into your application
+- Display users in a well-designed table/list view
+- Implement **search functionality** that filters users by:
+  - First name
+  - Last name
+  - Email
+  - Gender
+- Add **pagination** or **virtual scrolling** for performance
+- Implement **sorting** by any column
 
-#### Subscribe Endpoint
-- Implement a subscription system that allows clients to:
-  - Subscribe to changes in specific records
-  - Subscribe to search results (when new records matching a search query are added)
-- Notify subscribers in real-time when relevant changes occur
-- Support one or multiple subscription types (WebSocket, SSE, or similar)
+#### User Operations
+- **Add new users** with form validation
+- **Edit existing users** with pre-populated forms
+- **Delete users** with confirmation
+- **Bulk operations** (select multiple users for batch actions)
 
-### 2. Technical Requirements
-- Use Python 3.x
-- Consider scalability and performance
+### 3. State Management Requirements
+Demonstrate understanding of state management by implementing:
+- **Local component state** for form inputs and UI interactions
+- **Global state management** (choose one):
+  - React Context + useReducer
+  - Zustand
+  - Redux Toolkit
+  - Or any other modern state management solution
+- Proper **state normalization** for user data
+- **Optimistic updates** for better UX
+- **Error state handling** throughout the application
 
-### 3. Bonus Points
-- Implement authentication and authorization
-- Add rate limiting
-- Implement caching
-- Add monitoring and logging
-- Containerize the application
+### 4. UI/UX Requirements
+
+#### Design System
+- Use / Create a **consistent design system** with:
+  - Color palette
+  - Typography scale
+  - Spacing system
+  - Component variants
+- Implement **responsive design**
+- Use **modern CSS techniques** (CSS Grid, Flexbox, CSS Custom Properties)
+
+#### User Experience
+- **Loading states** for data operations
+- **Error boundaries** with user-friendly error messages
+- **Form validation** with clear feedback
+- **Smooth animations** for state transitions
+
+#### Suggested components to Build
+- User table/card view with search and filters
+- User form (create/edit) with validation
+- Modal/dialog components
+- Loading spinners and skeleton screens
+- Toast notifications for user feedback
+- Pagination controls
+
+### 5. Advanced Features
+
+#### Data Visualization
+- Create **charts/graphs** showing user demographics
+- Implement **data export** functionality (CSV, JSON)
+- Add **statistics dashboard** with key metrics
+
+#### Enhanced UX
+- **Dark/light theme** toggle
+- **Advanced filtering** with multiple criteria
+- **User preferences** persistence (localStorage)
+- **Keyboard shortcuts** for power users
+
+#### Performance Optimization
+- **Virtual scrolling** for large datasets
+- **Debounced search** implementation
+- **Memoization** of expensive calculations
+- **Code splitting** and lazy loading
+
+## Setup Instructions
+1. Initialize a new React TypeScript project using `create-react-app` or `Vite`
+2. Install necessary dependencies for state management and UI components
+3. Set up your preferred styling solution (CSS Modules, Styled Components, Tailwind, etc.)
+4. Implement the CSV data loader to parse the mock data
+5. Build the application following the requirements above
 
 ## Evaluation Criteria
 Your solution will be evaluated based on:
-1. Code quality and organization
-2. Implementation of requirements
-3. Error handling and edge cases
-4. Performance considerations
-5. Documentation
-7. Bonus features implementation
+
+### Technical Skills
+- **TypeScript proficiency**: Proper typing, interfaces, generics
+- **React best practices**: Component design, hooks usage, performance
+- **State management**: Clean architecture, proper data flow
+- **Code organization**: Structure, readability, maintainability
+
+### UI/UX Skills
+- **Design quality**: Visual appeal, consistency, modern aesthetics
+- **User experience**: Intuitive interactions, responsive design
+- **CSS/HTML skills**: Modern techniques, clean markup
+
+### Implementation Quality
+- **Functionality completeness**: All requirements implemented
+- **Error handling**: Robust error states and user feedback
+- **Performance**: Efficient rendering, optimized operations
+- **Documentation**: Clear README, code comments
+
+## Bonus Points
+- **Advanced animations**: Smooth micro-interactions
+- **PWA features**: Service worker, offline capability
+- **Advanced TypeScript**: Utility types, discriminated unions
+- **Performance monitoring**: Bundle analysis, optimization
 
 ## Submission
 Please provide:
-1. Link to repository with source code
-2. README with setup and running instructions
-3. API documentation
-4. Any additional notes or considerations
+1. **Repository link** with complete source code
+2. **README** with:
+   - Setup and running instructions
+   - Features implemented
+   - Technologies used
+3. **Brief explanation** of your approach and any interesting challenges solved
